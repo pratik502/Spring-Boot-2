@@ -13,3 +13,5 @@ Right Click on project-Run Configurations-> Select File-Path-Service Project
 VM arguments -Dserver.port= 8101
 
 2.Postman collection is saved in the same git repository
+
+3.Ignore Dockerfile in all projects
