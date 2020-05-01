@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "5ce1df28-c4bf-4f4b-8f17-ac632bfce82f",
+		"name": "Spring Boot Microservices Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cloud server url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8888/items-service/office",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"items-service",
+						"office"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cloud server url encrypt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8888/encrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"encrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Item Microservice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "File write service",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Username",
+						"value": "pratik",
+						"type": "text"
+					},
+					{
+						"key": "Password",
+						"value": "pratz",
+						"type": "text"
+					},
+					{
+						"key": "GrantType",
+						"value": "password",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\":\"01052020\",\n\"content\":\"Today i ran docker Microservices with Rangas services imported from Github site\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/file/write",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"file",
+						"write"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilePath",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTY2OTcwMDgsInVzZXJfbmFtZSI6InNuZWhhbCIsImF1dGhvcml0aWVzIjpbIkNBTl9XUklURSIsIkNBTl9SRUFEIl0sImp0aSI6ImU1M2ZkNDJhLTc3YmQtNDdhNC04ZTY1LWM3MDJjMjk0MjM0ZSIsImNsaWVudF9pZCI6IndlYiIsInNjb3BlIjpbIlJFQUQiLCJXUklURSJdfQ.UMfQdYPAIZVL8iQfg4Mp1HvKeMkRvlgRZ-ZZ6ZuG6m4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8100/get/path",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"get",
+						"path"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilePath through zuul",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTY2OTk0MzksInVzZXJfbmFtZSI6InNuZWhhbCIsImF1dGhvcml0aWVzIjpbIkNBTl9XUklURSIsIkNBTl9SRUFEIl0sImp0aSI6IjRhYTkxYzgzLTNiNjQtNDNlNi04NWQ5LTgwMDc5ZDIyNTMzZCIsImNsaWVudF9pZCI6IndlYiIsInNjb3BlIjpbIlJFQUQiLCJXUklURSJdfQ.dNY9hYFSeTlz2pAFASHxWGzwhD0iamy7ebQPFC41jj8",
+						"disabled": true
+					},
+					{
+						"key": "GrantType",
+						"value": "password",
+						"type": "text"
+					},
+					{
+						"key": "Username",
+						"value": "pratik",
+						"type": "text"
+					},
+					{
+						"key": "Password",
+						"value": "pratz",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8765/file-path-service/get/path",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"file-path-service",
+						"get",
+						"path"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OAuth token Check",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "web",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "webpass",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8282/oauth/check_token?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTk5OTIwMDcsInVzZXJfbmFtZSI6InNuZWhhbCIsImF1dGhvcml0aWVzIjpbIkNBTl9XUklURSIsIkNBTl9SRUFEIl0sImp0aSI6Ijc5OGNlYmZmLTM2MjItNGY2Mi04M2U1LTg5YzI3ZmU0MWJhZiIsImNsaWVudF9pZCI6IndlYiIsInNjb3BlIjpbIlJFQUQiLCJXUklURSJdfQ.VCxeQH0exXgpvH1iYKpdT2PApBmn8FSQe03vQY2nDiI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"oauth",
+						"check_token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "pratik",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "pratz",
+							"disabled": true
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1OTk5OTIwMDcsInVzZXJfbmFtZSI6InNuZWhhbCIsImF1dGhvcml0aWVzIjpbIkNBTl9XUklURSIsIkNBTl9SRUFEIl0sImp0aSI6Ijc5OGNlYmZmLTM2MjItNGY2Mi04M2U1LTg5YzI3ZmU0MWJhZiIsImNsaWVudF9pZCI6IndlYiIsInNjb3BlIjpbIlJFQUQiLCJXUklURSJdfQ.VCxeQH0exXgpvH1iYKpdT2PApBmn8FSQe03vQY2nDiI"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OAuth token fetch",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "webpass",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "web",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8282/oauth/token?grant_type=password&username=snehal&password=sneu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "username",
+							"value": "snehal"
+						},
+						{
+							"key": "password",
+							"value": "sneu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OAuth token fetch Copy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "web",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "webpass",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://192.168.99.100:8282/oauth/token?grant_type=password&username=snehal&password=sneu",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"99",
+						"100"
+					],
+					"port": "8282",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "password"
+						},
+						{
+							"key": "username",
+							"value": "snehal"
+						},
+						{
+							"key": "password",
+							"value": "sneu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 45177c75-1963-48c6-badb-82d78fab1924",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8282/actuator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8282",
+					"path": [
+						"actuator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "zuul 1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "version",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8111/api/xx/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8111",
+					"path": [
+						"api",
+						"xx",
+						"get"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
